@@ -1,0 +1,402 @@
+:root {
+    --primary-color: rgba(210, 218, 226,0.65);
+  }
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .lead {
+    font-size: 2.2rem;
+    font-style : italic;
+    font-family : 'Sacramento';
+    margin-bottom : 12px;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 77, 77,0.9);
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+      font-family : 'QuattroCento', sans-serif;
+      font-size : 18px;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+  }
+  
+  .navbar ul li a:hover {
+    color: skyblue;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top : 7%;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    
+   
+    /* Scroll Snap */
+    scroll-snap-align: center;
+  }
+  
+  section h1 {
+    font-size: 4rem;
+    font-family : 'QuattroCento', sans-serif;
+  }
+
+  section .chateautext{
+      position : relative;
+      top : 5%;
+      font-family : 'QuattroCento';
+      font-size : 18px;
+      font-weight : bolder;
+      width : 50%;
+  }
+.instagram-media{
+  display : block;
+  width : 600px;
+  height : 500px;
+}
+  section#home div{
+      align-self : flex-start;
+  }
+
+
+
+  
+  /* Section Images */
+   section#home{
+    background: var(--primary-color);
+    color: #000;
+    height: 100vh;
+    position: relative;
+    
+}
+section#home:before {
+    content: '';
+    background: url('https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+  section#about {
+    background: url('https://images.unsplash.com/photo-1535419342184-f4bd555a3c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80') no-repeat center center/cover;
+}
+  section#service{
+    background: var(--primary-color);
+    color: #000;
+    height: 100vh;
+    position: relative;
+    
+}
+
+section .chaitext{
+    padding : 48px;
+    font-family : 'QuattroCento';
+    font-size : 24px;
+    font-weight : bolder;
+    width : 50%;
+    height : 100%;
+    margin-top : 50px;
+}
+  
+  section#service:before {
+    content: "";
+    background: url('https://images.unsplash.com/photo-1491924778227-f225b115dd5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+  section#contact {
+    color: #000;
+    background: url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;;
+    display : flex;
+  }
+
+  .map{
+    position : relative;
+    top : 10%;
+
+  }
+
+
+
+
+  /*Owl Carousel*/
+.blogs{
+    display : block;
+    height : 450px !important;
+    margin : 0 auto 30px;
+
+}
+
+  .blog{
+    overflow : hidden;
+    position : relative;
+    height :100%;
+    cursor : pointer;
+    justify-content: center;
+    align-self : center;
+}
+.blog img{
+    width:100%;
+    height: 100%;
+}
+.blog-description {
+    position : absolute;
+    margin : 0;
+    bottom:  -40px;
+    background : #333333ca;
+    text-align : center;
+    width: 100%;
+    transition: .3s linear;
+
+}
+
+.blog:hover .blog-description {
+    bottom: 0;
+}
+
+.categorie {
+    display : inline-block;
+    color : #e77f67;
+    font-size:18px;
+    position : relative;
+    padding: 0 22px;
+}
+.categorie::before{
+    content: '';
+    position: absolute;
+    width :14px;
+    height:2px;
+    background: #e77f67;
+    left:0;
+    top:13px;
+}
+.categorie::after{
+    content: '';
+    position: absolute;
+    width :14px;
+    height:2px;
+    background: #e77f67;
+    right:0;
+    top:13px;
+}
+.title{
+    color: #fff;
+    font-weight: 500;
+    margin : 5px 0;
+}
+.date{
+        font-style : italic;
+        color : #e77f67;
+        margin-bottom: 20px;
+}
+
+.btn{
+    display : inline-block;
+    color : #e77f67;
+    text-decoration : none;
+    border: 1px solid #e77f67;
+    padding : 12px 20px;
+    opacity : 0;
+    transition : .3s linear
+}
+.blog:hover .btn{
+    opacity : 1;
+}
+.btn:hover{
+    color: #fff;
+    background : #e77f67;
+}
+
+.owl-carousel .owl-stage{
+    margin-top : 80px;
+    display: flex !important;
+    height : 650px;
+    width : 80%;
+}
+
+.owl-carousel img{
+    width : 100%;
+    height : 100%;
+}
+
+  
+
+/*Social Btn*/
+@media screen and ( max-width : 600px){
+
+  .navbar{
+    display : none;
+  }
+  #home h1 {
+    font-size : 24px;
+  }
+  #home .lead {
+    font-size : 20px;
+  }
+.instagram-media{
+    visibility: collapse;
+    display : none;
+  }
+  #home .chateautext {
+    position : relative;
+    top : 10%;
+    width : 100%;
+    padding : 0 25px;
+    font-size : 18px;
+  }
+  #about h1{
+    font-size : 24px;
+  }
+  #about .lead {
+    font-size : 20px;
+  }
+.blogs{
+  position : relative;
+  top : 30%;
+  left : 0;
+  transform : translateY(-40% );
+  width : 100%;
+  height : 100%;
+}
+.blog-description .title{
+  visibility : collapse;
+}
+.blog {
+
+}
+  .owl-carousel .owl-stage{
+    position : relative;
+    top : 60%;
+    text-align : center;
+    
+    height : 100%;
+    width : 100%;
+}
+.owl-carousel {
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  justify-content : center;
+  font-size : 12px;
+  width : 100%;
+}
+.blog-description{
+  display : flexbox;
+  text-align : center;
+}
+.owl-carousel img{
+  display : block;
+  width : 100%!important;
+  height : 400px!important;
+
+}
+
+#service h1{
+font-size : 18px;
+}
+
+#service .lead{
+  font-size : 12px;
+}
+#service .chaitext{
+  display : block;
+  width : 100%;
+  height : 100%;
+ font-size: 16px;
+}
+#contact{
+  display : flexbox;
+  flex-direction : column;
+  align-items : center;
+  text-align : center;
+}
+#contact .lead{
+  visibility: collapse;
+}
+#contact h1{
+  font-size:  18px;
+}
+#contact .map{
+  width : auto;
+  height : 150px;
+  position : relative;
+  top : 40%;
+}
+#contact .middle {
+  position : relative;  
+  top : 320px;
+  left : 0;
+  scale : (0.7)
+}
+#form{
+display : block;
+position : relative;
+right : 110px;
+top : 40px;
+}
+#form input{
+  width : 310px;
+}
+#form textarea{
+  width : 310px;
+}
+#form input[type=submit]{
+  width : 343px;
+  margin-top : 15px;
+}
+}
+
+
+
